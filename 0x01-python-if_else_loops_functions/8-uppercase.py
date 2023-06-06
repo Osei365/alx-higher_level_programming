@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def uppercase(s):
     if s == "":
-        print("")
+        pass
     else:
         for i in range(len(s)):
             if ord(s[i]) >= 97 and ord(s[i]) <= 122:
