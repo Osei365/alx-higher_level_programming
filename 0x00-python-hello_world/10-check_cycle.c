@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stdlib.h>
 /**
  * check_cyle - checks if a linkedlist is a cycle
  * @list: linked list
@@ -6,7 +7,7 @@
  */
 int check_cycle(listint_t *list)
 {
-	listint_t *comp1 *comp2
+	listint_t *comp1, *comp2;
 
 	if (list == NULL)
 	{
