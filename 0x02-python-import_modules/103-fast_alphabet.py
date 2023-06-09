@@ -1,3 +1,3 @@
 #!/usr/bin/python
 import string
-print(string.ascii_uppercase[:26])
+print(string.ascii_uppercase)
