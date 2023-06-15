@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
     if type(roman_string) == str and roman_string:
-        new_str = reversed(roman_string)
+        new_str = roman_string[::-1]
         rom_num = {
             'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000
         }
