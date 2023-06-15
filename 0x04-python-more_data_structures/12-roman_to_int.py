@@ -7,12 +7,12 @@ def roman_to_int(roman_string):
         }
         result = 0
         for i in range(len(new_str)):
-            val = rom_num[new_str[i]]
+            val = rom_num[new_str[i].upper()]
             if i == 0:
                 result += val
-            elif val < rom_num[new_str[i - 1]] and i > 0:
+            elif val < rom_num[new_str[i - 1].upper()] and i > 0:
                 result -= val
-            elif val >= rom_num[new_str[i - 1]] and i > 0:
+            elif val >= rom_num[new_str[i - 1].upper()] and i > 0:
                 result += val
         return (result)
     return (0)
