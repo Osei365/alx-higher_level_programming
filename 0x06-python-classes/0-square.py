@@ -2,5 +2,5 @@
 """ A class Square"""
 
 class Square:
-    """ the class does nothing""""
+    """ the class does nothing"""
     pass
