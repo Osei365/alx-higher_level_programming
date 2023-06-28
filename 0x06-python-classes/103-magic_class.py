@@ -6,8 +6,8 @@ import math
 
 
 class MagicClass:
-    """represntation of magic class.
-   
+    """represntation of magic class
+
     Args:
         radius (int or float): the radius of magic class
     """
