@@ -38,7 +38,7 @@ class Square:
                 len(value) != 2 or
                 not all(isinstance(num, int) for num in value) or
                 not all(num >= 0 for num in value)):
-           raise TypeError("position must be a tuple of 2 positive integers")
+            raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
     def area(self):
@@ -63,6 +63,7 @@ class Square:
                 [print(" ", end="") for n in range(self.__position[0])]
                 [print("#", end="") for m in range(self.__size)]
                 print("")
+
     def __str__(self):
         """This determines how class is displayed."""
         if self.__size == 0:
