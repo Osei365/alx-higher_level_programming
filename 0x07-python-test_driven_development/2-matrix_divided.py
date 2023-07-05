@@ -18,7 +18,7 @@ def matrix_divided(matrix, div):
        a new matrix
     """
     if (not isinstance(matrix, list) or
-            len(matrix) < 2 or
+            len(matrix) < 1 or
             not all(isinstance(item, list) for item in matrix) or
             not all(isinstance(n, (int, float)) for i in matrix for n in i)):
         raise TypeError('matrix must be a matrix (list of lists) '

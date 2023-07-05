@@ -13,18 +13,19 @@ check for list of lists of integers and floats
     >>> matrix_divided([], 7)
     Traceback (most recent call last):
     TypeError: matrix must be a matrix (list of lists) of integers/floats
-    >>> matrix_divided([[]], 7)
-    Traceback (most recent call last):
-    TypeError: matrix must be a matrix (list of lists) of integers/floats
-    >>> matrix_divided([[1,2,3]], 7)
-    Traceback (most recent call last):
-    TypeError: matrix must be a matrix (list of lists) of integers/floats
     >>> matrix_divided([[1,2,3], [2, 'school', 4]], 8)
     Traceback (most recent call last):
     TypeError: matrix must be a matrix (list of lists) of integers/floats
     >>> matrix_divided(['bag', [3,4,5], (8,5,6)], 15)
     Traceback (most recent call last):
     TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+check for matrix with single list or empty
+
+    >>> matrix_divided([[1,2,3]], 7)
+    [[0.14, 0.29, 0.43]]
+    >>> matrix_divided([[]], 7)
+    [[]]
 
 check for the size of lists in matrix
 
