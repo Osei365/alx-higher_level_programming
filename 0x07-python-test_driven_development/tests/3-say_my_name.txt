@@ -11,12 +11,12 @@ Import ``say_my_name`` from ``3-say_my_name`` module
 Working with just first_name (last_name has default value)
 
     >>> say_my_name("John")
-    my name is John 
+    My name is John 
 
 Inserting first and last name strings
 
     >>> say_my_name("John", "Doe")
-    my name is John Doe
+    My name is John Doe
 
 Working with non string first name
 
@@ -39,4 +39,4 @@ Working with both first and last names as non strings
 Working with empty first string
 
     >>> say_my_name("")
-    my name is  
+    My name is  
