@@ -66,6 +66,12 @@ Working with arguments of non equal width
     Traceback (most recent call last):
     TypeError: each row of m_a must be of the same size
 
+Working with arguments that can't be multiplied
+
+    >>> matrix_mul([[1, 2, 3, 4]], [[1, 2, 3], [4, 5, 6]])
+    Traceback (most recent call last):
+    ValueError: m_a and m_b can't be multiplied
+
 Working with floats
 
     >>> matrix_mul([[1.3, 2.5]], [[3.8, 4.1], [5.5, 66.9]])
