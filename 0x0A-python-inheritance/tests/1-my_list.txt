@@ -1,0 +1,37 @@
+>>> MyList = __import__('1-my_list').MyList
+
+>>> my_list = MyList()
+
+>>> my_list.extend([1, 4, 2, 3, 5])
+
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
+
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+
+>>> new_list = MyList()
+
+>>> new_list.extend([9, 8, 7, 6, 5])
+
+>>> print(new_list)
+[9, 8, 7, 6, 5]
+
+>>> new_list.print_sorted()
+[5, 6, 7, 8, 9]
+
+>>> print(new_list)
+[9, 8, 7, 6, 5]
+
+>>> third_list = MyList()
+
+>>> third_list.print_sorted()
+[]
+
+>>> third_list.extend([4, 4, 4, 4,])
+
+>>> third_list.print_sorted()
+[4, 4, 4, 4]
