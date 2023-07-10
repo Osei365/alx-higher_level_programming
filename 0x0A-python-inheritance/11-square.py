@@ -18,4 +18,4 @@ class Square(Rectangle):
 
     def __str__(self):
         """returns class representative in a print."""
-        return "[Square] {}/{}".format(self.__width, self.__height)
+        return "[Square] {}/{}".format(self.__size, self.__size)
