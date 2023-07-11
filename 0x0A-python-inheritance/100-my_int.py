@@ -4,7 +4,7 @@
 
 class MyInt(int):
     """represents the MyInt class."""
-    
+
     def __eq__(self, obj):
         """equal to method."""
         return not self.real == obj
