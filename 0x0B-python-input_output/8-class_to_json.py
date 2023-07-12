@@ -3,9 +3,6 @@
 dict of a class obj."""
 
 
-import json
-
-
 def class_to_json(obj):
     """returns dict rep of a class obj in json.
     serialization."""
