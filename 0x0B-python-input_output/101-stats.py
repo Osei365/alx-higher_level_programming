@@ -3,7 +3,6 @@
 after 10 metrics read."""
 
 
-
 def print_stats(sz, codes):
     """Print after 10 metrics info.
     """
