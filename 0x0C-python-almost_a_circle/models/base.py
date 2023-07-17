@@ -25,6 +25,7 @@ class Base:
         """converts dictionary object to json"""
 
         if (list_dictionaries is None or
-                list_dictionaries == []):
+                list_dictionaries == [] or
+                not all(isinstance(item, dict) for item in list_dictionaries)):
             return "[]"
         return json.dumps(list_dictionaries)
