@@ -47,3 +47,14 @@ class Base:
         with open("{}.json".format(cls.__name__), "w") as f:
             json_repr = cls.to_json_string(list_dict)
             f.write(json_repr)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """creates an instance of the class in
+        question"""
+        if cls.__name__ == "Square":
+            instance = cls(size=1)
+        elif cls.__name__ == "Rectangle":
+            instance = cls(width=1, height=1)
+        instance.update(**dictionary)
+        return instance
