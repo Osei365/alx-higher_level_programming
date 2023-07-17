@@ -3,6 +3,8 @@
 
 
 import json
+import csv
+import turtle
 
 
 class Base:
@@ -68,5 +70,37 @@ class Base:
                 list_dict = cls.from_json_string(f.read())
                 list_instances = [cls.create(**dic) for dic in list_dict]
                 return list_instances
+        except FileNotFoundError:
+            return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """save a list of rect or square objects
+        into a csv file"""
+
+        with open(f"{cls.__name__}.csv", "w") as f:
+            if list_objs is None or len(list_objs) == 0:
+                f.write("[]")
+            else:
+                if cls.__name__ == "Square":
+                    keys = ["id", "size", "x", "y"]
+                elif cls.__name__ == "Rectangle":
+                    keys = ["id", "width", "height", "x", "y"]
+                csv_obj = csv.DictWriter(f, fieldnames=keys)
+                for ins in list_objs:
+                    csv_obj.writerow(ins.to_dictionary())
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """load csv file and return list of instances."""
+        try:
+            with open(f"{cls.__name__}.csv", "r") as f:
+                if cls.__name__ == "Square":
+                    keys = ["id", "size", "x", "y"]
+                elif cls.__name__ == "Rectangle":
+                    keys = ["id", "width", "height", "x", "y"]
+                csvdict = csv.DictReader(f, fieldnames=keys)
+                listdict = [{k: int(v) for k, v in d.items()} for d in csvdict]
+                return [cls.create(**dic) for dic in listdict]
         except FileNotFoundError:
             return []
