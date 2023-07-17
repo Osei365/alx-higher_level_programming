@@ -29,11 +29,14 @@ class Base:
                 not all(isinstance(item, dict) for item in list_dictionaries)):
             return "[]"
         return json.dumps(list_dictionaries)
-    
+
     @classmethod
     def save_to_file(cls, list_objs):
         """saves file with json object"""
-        list_dict = [r.to_dictionary() for r in list_objs]
+        if list_objs is not None:
+            list_dict = [r.to_dictionary() for r in list_objs]
+        else:
+            list_dict = []
         with open("{}.json".format(cls.__name__), "w") as f:
             json_repr = cls.to_json_string(list_dict)
             f.write(json_repr)
