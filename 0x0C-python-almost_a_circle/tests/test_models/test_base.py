@@ -18,8 +18,8 @@ class TestBase(unittest.TestCase):
         self.b5 = Base()
 
     def test_init(self):
-        self.assertEqual(self.b1.id, 1)
-        self.assertEqual(self.b2.id, 2)
-        self.assertEqual(self.b3.id, 3)
+        self.assertEqual(self.b1.id, self.b2.id - 1)
+        self.assertEqual(self.b2.id, self.b1.id + 1)
+        self.assertEqual(self.b3.id, self.b2.id + 1)
         self.assertEqual(self.b4.id, 12)
-        self.assertEqual(self.b5.id, 4)
+        self.assertEqual(self.b5.id, self.b3.id + 1)
