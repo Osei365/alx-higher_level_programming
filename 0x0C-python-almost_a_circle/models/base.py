@@ -58,7 +58,7 @@ class Base:
             instance = cls(width=1, height=1)
         instance.update(**dictionary)
         return instance
-    
+
     @classmethod
     def load_from_file(cls):
         """loads a json file"""
