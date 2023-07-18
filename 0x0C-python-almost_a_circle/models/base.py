@@ -26,9 +26,7 @@ class Base:
     def to_json_string(list_dictionaries):
         """converts dictionary object to json"""
 
-        if (list_dictionaries is None or
-                list_dictionaries == [] or
-                not all(isinstance(item, dict) for item in list_dictionaries)):
+        if list_dictionaries is None or list_dictionaries == []:
             return "[]"
         return json.dumps(list_dictionaries)
 
@@ -104,3 +102,33 @@ class Base:
                 return [cls.create(**dic) for dic in listdict]
         except FileNotFoundError:
             return []
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """draw rectangles and squares based on
+        their parameters using the turtle module"""
+
+        myturtle = turtle.Turtle()
+        myturtle.pensize(5)
+
+        myturtle.color("blue")
+        for rect in list_rectangles:
+            myturtle.penup()
+            myturtle.goto(rect.x, rect.y)
+            myturtle.pendown()
+            for _ in range(2):
+                myturtle.forward(rect.width)
+                myturtle.left(90)
+                myturtle.forward(rect.height)
+                myturtle.left(90)
+
+        myturtle.color("purple")
+        for sq in list_squares:
+            myturtle.penup()
+            myturtle.goto(sq.x, sq.y)
+            myturtle.pendown()
+            for _ in range(4):
+                myturtle.forward(sq.size)
+                myturtle.left(90)
+        myturtle.hideturtle()
+        turtle.exitonclick()
