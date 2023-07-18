@@ -28,7 +28,15 @@ class Base:
 
         if list_dictionaries is None or list_dictionaries == []:
             return "[]"
-        return json.dumps(list_dictionaries)
+        else:
+            new_list = []
+            new_list.append(list_dictionaries[0])
+            for i in range(1, len(list_dictionaries)):
+                if list_dictionaries[i]["id"] == list_dictionaries[i-1]["id"]:
+                    new_list[-1] = list_dictionaries[i]
+                else:
+                    new_list.append(list_dictionaries[i])
+            return json.dumps(new_list)
 
     @staticmethod
     def from_json_string(json_string):
