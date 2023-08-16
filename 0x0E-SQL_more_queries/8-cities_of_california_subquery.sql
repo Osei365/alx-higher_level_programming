@@ -1,8 +1,8 @@
 -- select cities from states
 
-SELECT cities.id, cities.name FROM cities
-WHERE states.state_id = (
-	SELECT states.id from states
-	WHERE states.name = 'California'
+SELECT id, name FROM cities
+WHERE state_id = (
+	SELECT id from states
+	WHERE name = 'California'
 )
-ORDER BY cities.id ASC;
+ORDER BY id ASC;
