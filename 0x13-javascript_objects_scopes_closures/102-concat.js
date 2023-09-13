@@ -16,5 +16,5 @@ try {
   data = '';
 }
 
-const data3 = data + '\n' + data2 + '\n';
+const data3 = data + data2;
 fs.writeFileSync('fileC', data3);
