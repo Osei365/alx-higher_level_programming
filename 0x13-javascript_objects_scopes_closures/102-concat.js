@@ -17,4 +17,4 @@ try {
 }
 
 const data3 = data + data2;
-fs.writeFileSync('fileC', data3);
+fs.writeFileSync(process.argv[4], data3);
