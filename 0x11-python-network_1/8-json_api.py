@@ -15,6 +15,6 @@ if __name__ == "__main__":
         if len(ret) == 0:
             print("No result")
         else:
-            print("[{}] {}".format(ret['id'], ret['name']))
-    except requests.exceptions.JSONDecodeError:
+            print("[{}] {}".format(ret.get('id'), ret.get('name')))
+    except ValueError:
         print('Not a valid JSON')
