@@ -1,3 +1,3 @@
-let tag = document.querySelector('header')
+let tag = document.querySelector('header');
 
-tag.style.color = '#FF0000'
+tag.style.color = '#FF0000';
